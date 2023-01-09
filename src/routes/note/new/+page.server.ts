@@ -4,6 +4,8 @@ import { fail, redirect } from '@sveltejs/kit'
 
 export const actions: Actions = {
   default: async (event) => {
+    const user = await event.locals.getSession();
+    console.log(user);
     const info = Object.fromEntries(await event.request.formData());
     const data = await newNoteValidator.safeParseAsync(info);
 
