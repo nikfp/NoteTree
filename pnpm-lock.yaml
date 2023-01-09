@@ -18,6 +18,7 @@ specifiers:
   eslint-plugin-svelte3: ^4.0.0
   felte: ^1.2.6
   prettier: ^2.8.1
+  prettier-plugin-svelte: ^2.9.0
   prisma: ^4.8.1
   svelte: 3.55.0
   svelte-check: 2.10.2
@@ -47,6 +48,7 @@ devDependencies:
   eslint-config-prettier: 8.6.0_eslint@8.31.0
   eslint-plugin-svelte3: 4.0.0_6go7qzsvzihesfwmyvq3tnl5qq
   prettier: 2.8.1
+  prettier-plugin-svelte: 2.9.0_ajxj753sv7dbwexjherrch25ta
   prisma: 4.8.1
   svelte: 3.55.0
   svelte-check: 2.10.2_svelte@3.55.0
@@ -1457,6 +1459,16 @@ packages:
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier-plugin-svelte/2.9.0_ajxj753sv7dbwexjherrch25ta:
+    resolution: {integrity: sha512-3doBi5NO4IVgaNPtwewvrgPpqAcvNv0NwJNflr76PIGgi9nf1oguQV1Hpdm9TI2ALIQVn/9iIwLpBO5UcD2Jiw==}
+    peerDependencies:
+      prettier: ^1.16.4 || ^2.0.0
+      svelte: ^3.2.0
+    dependencies:
+      prettier: 2.8.1
+      svelte: 3.55.0
     dev: true
 
   /prettier/2.8.1:
