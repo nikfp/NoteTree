@@ -2,7 +2,7 @@ import z from 'zod';
 import type { toZod } from 'tozod';
 import type { Note } from '$lib/database'
 
-export const updateNoteValidator: toZod<Note> = z.object({
+export const updateNoteValidator: toZod<Omit<Note, "userId">> = z.object({
   id: z.string().cuid(),
   title: z.string()
     .trim()
@@ -11,4 +11,4 @@ export const updateNoteValidator: toZod<Note> = z.object({
   body: z.string().trim().min(1, "Body cannont be empty")
 })
 
-export const newNoteValidator = updateNoteValidator.omit({ id: true });
+export const newNoteValidator = updateNoteValidator.omit({ id: true});

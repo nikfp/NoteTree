@@ -8,9 +8,11 @@ generator client {
 }
 
 model Note {
-  id    String @id @default(uuid())
-  title String
-  body  String
+  id     String @id @default(uuid())
+  userId String
+  title  String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  body   String
 }
 
 model Account {
@@ -48,6 +50,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  notes         Note[]
 }
 
 model VerificationToken {
