@@ -13,7 +13,11 @@
     <ul>
       {#each notes as note (note.id)}
         <li>
-          <p>{note.title}</p>
+          <p>
+            <a href={`/note/${note.id}`}>
+              {note.title}
+            </a>
+          </p>
           <p>{note.body}</p>
         </li>
       {/each}
