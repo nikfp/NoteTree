@@ -8,11 +8,14 @@ generator client {
 }
 
 model Note {
-  id     String @id @default(uuid())
-  userId String
-  title  String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  body   String
+  id       String  @id @default(uuid())
+  userId   String
+  title    String
+  body     String
+  user     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  parentId String?
+  parent   Note?   @relation("NoteParent", fields: [parentId], references: [id])
+  children     Note[] @relation("NoteParent")
 }
 
 model Account {

@@ -15,6 +15,7 @@ export const load: PageServerLoad = async function (event) {
   const notes = await prisma.note.findMany({
     where: {
       userId,
+      parentId: null
     },
   })
 
