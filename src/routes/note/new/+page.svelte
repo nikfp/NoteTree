@@ -4,8 +4,8 @@
   export let form: ActionData
 </script>
 
-<h1>You hit the new note page!</h1>
-<EditForm />
+<h1>Add New Note</h1>
+  <EditForm />
 {#if form?.error}
   <ul>
     {#each form.errors as error}

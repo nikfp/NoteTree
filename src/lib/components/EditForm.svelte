@@ -1,15 +1,18 @@
 <script lang="ts">
   import { enhance } from "$app/forms"
+  import { FormGroup, Input, Label, Button } from "sveltestrap"
+  export let title = ""
+  export let body = ""
 </script>
 
 <form use:enhance method="post">
-  <p>
-    <label for="title">Title</label>
-    <input id="title" type="text" name="title" />
-  </p>
-  <p>
-    <label for="body">Body</label>
-    <textarea id="body" name="body" />
-  </p>
-  <button type="submit">submit</button>
+  <FormGroup>
+    <Label for="title">Title</Label>
+    <Input id="title" type="text" name="title" bind:value={title} />
+  </FormGroup>
+  <FormGroup>
+    <Label for="body">Body</Label>
+    <Input type="textarea" id="body" name="body" bind:value={body} />
+  </FormGroup>
+  <Button color="success" type="submit">submit</Button>
 </form>
