@@ -3,8 +3,17 @@
   export let data: PageData
 </script>
 
+<h1>{data.note.title}</h1>
+<a href={`/note/${data.note.id}/new`} class="btn btn-outline-secondary"
+  >Add a subnote</a
+>
+<hr />
 <p>
-  Title: {data.note.title}
-  <br />
   {data.note.body}
-  </p>
+</p>
+<hr />
+<ul>
+  {#each data.note.children as child (child.id)}
+    <li>{child.title}</li>
+  {/each}
+</ul>

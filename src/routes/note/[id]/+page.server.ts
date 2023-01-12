@@ -18,6 +18,9 @@ export const load: PageServerLoad = async function (event) {
       userId,
       id,
     },
+    include: {
+      children: true,
+    },
   })
 
   if (!note) throw error(404, "Note not found")
