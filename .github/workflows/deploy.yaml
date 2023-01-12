@@ -14,8 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build Assets  
+      - name: Install PNPM  
         run: npm install --global pnpm
+      - name: Install Dependencies
         run: pnpm install
       - name: Create prisma client
         run: pnpm exec prisma generate
