@@ -4,6 +4,7 @@ import type { Note } from '$lib/database'
 
 export const updateNoteValidator: toZod<Omit<Note, "userId">> = z.object({
   id: z.string().cuid(),
+  parentId: z.string().cuid().nullable(),
   title: z.string()
     .trim()
     .min(2, "Title must be at least 2 characters")
@@ -11,4 +12,5 @@ export const updateNoteValidator: toZod<Omit<Note, "userId">> = z.object({
   body: z.string().trim().min(1, "Body cannont be empty")
 })
 
-export const newNoteValidator = updateNoteValidator.omit({ id: true});
+export const newChildNoteValidator = updateNoteValidator.omit({ id: true});
+export const newNoteValidator = newChildNoteValidator.omit({ parentId: true});
