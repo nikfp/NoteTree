@@ -1,4 +1,6 @@
 <script lang="ts">
+  import NoteCard from "$lib/components/NoteCard.svelte"
+
   import type { PageData } from "./$types"
   export let data: PageData
 </script>
@@ -14,6 +16,10 @@
 <hr />
 <ul>
   {#each data.note.children as child (child.id)}
-    <li>{child.title}</li>
+    <NoteCard
+      href={`/note/${child.id}`}
+      title={child.title}
+      body={child.body}
+    />
   {/each}
 </ul>
