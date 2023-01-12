@@ -9,7 +9,7 @@
 
 {#if data.session?.user}
   <p>
-    <a href="/note/new" class="btn btn-outline-secondary">Add new note</a>
+    <a href="/note/new" class="btn btn-outline-secondary">Add new note!</a>
   </p>
   {#if notes.length > 0}
     <div>
