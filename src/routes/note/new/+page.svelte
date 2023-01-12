@@ -5,7 +5,7 @@
 </script>
 
 <h1>Add New Note</h1>
-  <EditForm />
+<EditForm />
 {#if form?.error}
   <ul>
     {#each form.errors as error}
