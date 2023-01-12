@@ -7,7 +7,7 @@ export const load: PageServerLoad = async function (event) {
   const user = session?.user
 
   if (!user) {
-    throw error(401, "not logged in")
+    throw error(401, "Please log in to begin")
   }
 
   const { id: userId } = user
