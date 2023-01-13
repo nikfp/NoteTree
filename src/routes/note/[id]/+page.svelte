@@ -5,11 +5,18 @@
   export let data: PageData
 </script>
 
+<svelte:head>
+  <title>{data.note.title}</title>
+</svelte:head>
+
 <h1>{data.note.title}</h1>
+
 <a href={`/note/${data.note.id}/new`} class="btn btn-outline-secondary"
   >Add a subnote</a
 >
+
 <hr />
+
 <p>
   {data.note.body}
 </p>

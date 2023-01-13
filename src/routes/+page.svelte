@@ -1,12 +1,14 @@
 <script lang="ts">
   import type { PageData } from "./$types"
-  import { Card } from "sveltestrap"
   import NoteCard from "$lib/components/NoteCard.svelte"
   export let data: PageData
 
   const notes = data.notes
 </script>
 
+<svelte:head>
+  <title>NoteTree - Home</title>
+</svelte:head>
 {#if data.session?.user}
   <p>
     <a href="/note/new" class="btn btn-outline-secondary">Add new note!</a>
@@ -25,4 +27,3 @@
 {:else}
   <h2>Please sign in to begin.</h2>
 {/if}
-
