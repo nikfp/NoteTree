@@ -21,12 +21,6 @@
   {data.note.body}
 </p>
 <hr />
-<ul>
-  {#each data.note.children as child (child.id)}
-    <NoteCard
-      href={`/note/${child.id}`}
-      title={child.title}
-      body={child.body}
-    />
-  {/each}
-</ul>
+{#each data.note.children as child (child.id)}
+  <NoteCard href={`/note/${child.id}`} title={child.title} body={child.body} />
+{/each}
