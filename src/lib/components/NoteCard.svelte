@@ -1,23 +1,42 @@
 <script lang="ts">
-  import { Card } from "sveltestrap"
   export let title: string
   export let body: string
   export let href: string
 </script>
 
 <a {href}>
-  <Card class="p-2 mb-3">
+  <div class="p-2 mb-3 card cardlink">
     <h4>
       {title}
     </h4>
     <p>{body}</p>
-  </Card>
+  </div>
 </a>
 
 <style>
   a {
     text-decoration: none;
     color: inherit;
+  }
+  .cardlink {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .cardlink:hover {
+    box-shadow: 0 0.375rem 0.25rem 0.125rem var(--fbc-secondary-text);
+    transform: translateY(-0.375rem);
+  }
+
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
   }
 
   h4 {
