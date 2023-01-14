@@ -1,6 +1,11 @@
 <script lang="ts">
-  import { page } from "$app/stores"
+  import { navigating, page } from "$app/stores"
+  import Loading from "$lib/components/Loading.svelte"
 </script>
+
+{#if $navigating}
+  <Loading />
+{/if}
 
 <div>
   <header>
