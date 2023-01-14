@@ -15,6 +15,8 @@
   >Add a subnote</a
 >
 
+  <a href={`/note/edit/${data.note.id}`} class="btn btn-outline-secondary">Edit note</a>
+
 <hr />
 
 <p>
