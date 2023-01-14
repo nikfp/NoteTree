@@ -42,6 +42,10 @@
   <NoteCard href={`/note/${child.id}`} title={child.title} body={child.body} />
 {/each}
 
+<a href={`/note/delete/${data.note.id}`} class="btn btn-outline-danger btn-sm"
+  >Delete this note</a
+>
+
 <style>
   .btn-spaced {
     margin: 0.125rem 0;

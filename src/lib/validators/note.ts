@@ -16,3 +16,7 @@ export const baseValidator: toZod<Omit<Note, "userId">> = z.object({
 export const newChildNoteValidator = baseValidator.omit({ id: true })
 export const editNoteValidator = baseValidator.omit({ parentId: true })
 export const newNoteValidator = newChildNoteValidator.omit({ parentId: true })
+
+export const idValidator = z.object({
+  id: z.string(),
+})
