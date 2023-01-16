@@ -4,7 +4,7 @@
   export let href: string
 </script>
 
-<a {href}>
+<a data-sveltekit-preload-data="hover" {href}>
   <div class="p-2 mb-3 card cardlink">
     <h4>
       {title}
