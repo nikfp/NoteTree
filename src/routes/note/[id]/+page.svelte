@@ -1,4 +1,6 @@
 <script lang="ts">
+    import BreadCrumbs from "$lib/components/BreadCrumbs.svelte"
+
   import NoteCard from "$lib/components/NoteCard.svelte"
 
   import type { PageData } from "./$types"
@@ -8,6 +10,8 @@
 <svelte:head>
   <title>{data.note.title}</title>
 </svelte:head>
+
+<BreadCrumbs id={data.note.id}/>
 
 <h1>{data.note.title}</h1>
 
