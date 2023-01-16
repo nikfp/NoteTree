@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Breadcrumb, BreadcrumbItem, Spinner } from "sveltestrap"
+  import { Breadcrumb } from "sveltestrap"
   import type { BreadCrumb as Crumb } from "../../routes/api/breadcrumbs/+server"
 
   export let id: string
@@ -20,12 +20,17 @@
 </script>
 
 <Breadcrumb>
-  <BreadcrumbItem href="/">Home</BreadcrumbItem>
-  {#await crumbs then result}
+  <a href="/">Home</a>
+  {#await crumbs}
+    .... loading ....
+  {:then result}
     {#if result}
       {#each result.breadcrumbs as crumb (crumb.id)}
-        <BreadcrumbItem href={`/note/${crumb.id}`}>{crumb.title}</BreadcrumbItem
-        >
+        {#if crumb.id === id}
+          /{crumb.title}
+        {:else}
+          <a href={`/note/${crumb.id}`}>/{crumb.title}</a>
+        {/if}
       {/each}
     {/if}
   {/await}
