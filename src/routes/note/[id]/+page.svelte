@@ -14,21 +14,21 @@
 <div class="buttons">
   <a
     href={`/note/${data.note.id}/new`}
-    class="btn btn-spaced btn-outline-secondary">Add a subnote</a
+    class="btn btn-sm btn-spaced btn-outline-secondary">Add a subnote</a
   >
 
   <a
     href={`/note/edit/${data.note.id}`}
-    class="btn btn-spaced btn-outline-secondary">Edit note</a
+    class="btn btn-sm btn-spaced btn-outline-secondary">Edit note</a
   >
 
   {#if data.note.parentId}
     <a
       href={`/note/${data.note.parentId}`}
-      class="btn btn-spaced btn-outline-secondary">Go to parent note</a
+      class="btn btn-sm btn-spaced btn-outline-secondary">Go to parent note</a
     >
   {:else}
-    <a href="/" class="btn btn-spaced btn-outline-secondary">Go to top level</a>
+    <a href="/" class="btn btn-sm btn-spaced btn-outline-secondary">Go to top level</a>
   {/if}
 </div>
 
