@@ -21,8 +21,8 @@
           <span class="signedInText">
             <small>Signed in as</small><br />
             <strong
-              >{$page.data.session.user?.email ??
-                $page.data.session.user?.name}</strong
+              >{$page.data.session.user?.name ??
+                $page.data.session.user?.email}</strong
             >
           </span>
           <a href="/auth/signout" class="button">Sign out</a>
