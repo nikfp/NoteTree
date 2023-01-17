@@ -5,6 +5,11 @@ import type { Note } from "$lib/database"
 export const baseValidator: toZod<Omit<Note, "userId">> = z.object({
   id: z.string().cuid(),
   parentId: z.string().cuid().nullable(),
+  description: z
+    .string()
+    .trim()
+    .max(255, "Description cannot exceed 255 characters")
+    .nullable(),
   title: z
     .string()
     .trim()

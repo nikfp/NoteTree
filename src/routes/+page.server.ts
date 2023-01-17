@@ -21,8 +21,8 @@ export const load: PageServerLoad = async function (event) {
 
   return {
     notes: notes.map((note) => {
-      const { id, title, body } = note
-      return { id, title, body }
+      const { id, title, body, description } = note
+      return { id, title, body, description }
     }),
   }
 }

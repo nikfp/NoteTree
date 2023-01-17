@@ -1,5 +1,5 @@
 <script lang="ts">
-    import BreadCrumbs from "$lib/components/BreadCrumbs.svelte"
+  import BreadCrumbs from "$lib/components/BreadCrumbs.svelte"
 
   import NoteCard from "$lib/components/NoteCard.svelte"
 
@@ -11,9 +11,15 @@
   <title>{data.note.title}</title>
 </svelte:head>
 
-<BreadCrumbs id={data.note.id}/>
+<BreadCrumbs id={data.note.id} />
 
 <h1>{data.note.title}</h1>
+
+{#if data.note.description}
+  <h3>{data.note.description}</h3>
+{/if}
+
+<hr />
 
 <div class="buttons">
   <a
@@ -32,7 +38,9 @@
       class="btn btn-sm btn-spaced btn-outline-secondary">Go to parent note</a
     >
   {:else}
-    <a href="/" class="btn btn-sm btn-spaced btn-outline-secondary">Go to top level</a>
+    <a href="/" class="btn btn-sm btn-spaced btn-outline-secondary"
+      >Go to top level</a
+    >
   {/if}
 </div>
 
@@ -43,7 +51,11 @@
 </p>
 <hr />
 {#each data.note.children as child (child.id)}
-  <NoteCard href={`/note/${child.id}`} title={child.title} body={child.body} />
+  <NoteCard
+    href={`/note/${child.id}`}
+    title={child.title}
+    cardBody={child.description}
+  />
 {/each}
 
 <a href={`/note/delete/${data.note.id}`} class="btn btn-outline-danger btn-sm"
