@@ -1,15 +1,17 @@
 <script lang="ts">
   export let title: string
-  export let body: string
+  export let cardBody: string | null
   export let href: string
 </script>
 
 <a data-sveltekit-preload-data="hover" {href}>
   <div class="p-2 mb-3 card cardlink">
-    <h4>
+    <h4 style={cardBody ? "text-decoration: underline" : ""}>
       {title}
     </h4>
-    <p>{body}</p>
+    {#if cardBody}
+      <p>{cardBody}</p>
+    {/if}
   </div>
 </a>
 
@@ -37,9 +39,5 @@
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
-  }
-
-  h4 {
-    text-decoration: underline;
   }
 </style>
