@@ -44,7 +44,7 @@ jobs:
     if: |
       always() &&
       (needs.Sync-database.result == 'success' || needs.Sync-database.result == 'skipped')
-      needs.paths-filter.outputs.readme == 'false'
+      (needs.paths-filter.outputs.readme == 'false')
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
