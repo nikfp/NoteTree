@@ -10,22 +10,8 @@ on:
   workflow_dispatch:
     branches: [main]
 jobs:
-  Paths-filter: 
-    runs-on: ubuntu-latest
-    outputs: 
-      should_sync_db: ${{ steps.filter.outputs.prisma }}
-    steps:
-    - uses: actions/checkout@v3
-    - uses: dorny/paths-filter@v2
-      id: filter
-      with:
-        filters: |
-          prisma: 
-          - 'prisma/**'
   Sync-Database:
     runs-on: ubuntu-latest
-    needs: [Paths-filter]
-    if: needs.Paths-filter.outputs.prisma == 'true'
     steps:
       - uses: actions/checkout@v3
       - name: Install PNPM  
