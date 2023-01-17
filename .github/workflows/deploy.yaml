@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - 'main'
+    paths-ignore: 
+      - '**/*.md'
   workflow_dispatch:
     branches: [main]
 jobs:
@@ -22,8 +24,6 @@ jobs:
         filters: |
           prisma: 
           - 'prisma/**'
-          readme: 
-          - 'README.md'
   Sync-Database:
     runs-on: ubuntu-latest
     needs: [paths-filter]
@@ -38,19 +38,12 @@ jobs:
         run: pnpm exec prisma generate
       - name: Sync database with schema
         run: pnpm exec prisma migrate deploy
-  Debug: 
-    runs-on: ubuntu-latest
-    needs: [paths-filter]
-    steps: 
-      - name: Echo readme Variable
-        run: echo needs.paths-filter.outputs.readme
   Deploy-App:
     runs-on: ubuntu-latest
-    needs: [Sync-Database, paths-filter]
+    needs: [Sync-Database]
     if: |
       always() &&
-      (needs.Sync-database.result == 'success' || needs.Sync-database.result == 'skipped') &&
-      (needs.paths-filter.outputs.readme == 'false')
+      (needs.Sync-database.result == 'success' || needs.Sync-database.result == 'skipped')
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
