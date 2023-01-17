@@ -20,7 +20,7 @@
   })
 </script>
 
-<form use:enhance method="post">
+<form use:enhance on:submit={() => disabled = true} method="post">
   <FormGroup>
     <Label for="title">Title</Label>
     <Input id="title" type="text" name="title" bind:value={title} />
@@ -33,6 +33,6 @@
     {disabled}
     color="success"
     type="submit"
-    on:click={() => (disabled = true)}>submit</Button
+    >submit</Button
   >
 </form>
