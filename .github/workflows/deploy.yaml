@@ -43,7 +43,7 @@ jobs:
     needs: [Sync-Database, paths-filter]
     if: |
       always() &&
-      (needs.Sync-database.result == 'success' || needs.Sync-database.result == 'skipped') &&
+      (needs.Sync-database.result == 'success' || needs.Sync-database.result == 'skipped')
       needs.paths-filter.outputs.readme == 'false'
     steps:
       - uses: actions/checkout@v3
