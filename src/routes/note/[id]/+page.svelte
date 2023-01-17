@@ -1,5 +1,5 @@
 <script lang="ts">
-    import BreadCrumbs from "$lib/components/BreadCrumbs.svelte"
+  import BreadCrumbs from "$lib/components/BreadCrumbs.svelte"
 
   import NoteCard from "$lib/components/NoteCard.svelte"
 
@@ -11,7 +11,7 @@
   <title>{data.note.title}</title>
 </svelte:head>
 
-<BreadCrumbs id={data.note.id}/>
+<BreadCrumbs id={data.note.id} />
 
 <h1>{data.note.title}</h1>
 
@@ -38,7 +38,9 @@
       class="btn btn-sm btn-spaced btn-outline-secondary">Go to parent note</a
     >
   {:else}
-    <a href="/" class="btn btn-sm btn-spaced btn-outline-secondary">Go to top level</a>
+    <a href="/" class="btn btn-sm btn-spaced btn-outline-secondary"
+      >Go to top level</a
+    >
   {/if}
 </div>
 
