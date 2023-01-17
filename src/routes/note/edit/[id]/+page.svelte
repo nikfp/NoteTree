@@ -7,12 +7,12 @@
   export let form: ActionData
 
   const { note } = data
-  const { title, body } = note
+  const { title, body, description } = note
 </script>
 
 <h1>Editing: {title}</h1>
 
-<EditForm {title} {body} />
+<EditForm {title} {body} {description}/>
 
 {#if form?.error}
   <ul>

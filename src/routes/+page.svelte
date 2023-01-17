@@ -19,7 +19,7 @@
         <NoteCard
           href={`/note/${note.id}`}
           title={note.title}
-          body={note.body}
+          cardBody={note.description}
         />
       {/each}
     </div>

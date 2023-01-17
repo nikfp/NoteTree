@@ -15,6 +15,12 @@
 
 <h1>{data.note.title}</h1>
 
+{#if data.note.description}
+  <h3>{data.note.description}</h3>
+{/if}
+
+<hr />
+
 <div class="buttons">
   <a
     href={`/note/${data.note.id}/new`}
@@ -43,7 +49,11 @@
 </p>
 <hr />
 {#each data.note.children as child (child.id)}
-  <NoteCard href={`/note/${child.id}`} title={child.title} body={child.body} />
+  <NoteCard
+    href={`/note/${child.id}`}
+    title={child.title}
+    cardBody={child.description}
+  />
 {/each}
 
 <a href={`/note/delete/${data.note.id}`} class="btn btn-outline-danger btn-sm"
