@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     branches: [main]
 jobs:
-  Paths-filter: 
+  paths-filter: 
     runs-on: ubuntu-latest
     outputs: 
       should_sync_db: ${{ steps.filter.outputs.prisma }}
@@ -26,7 +26,7 @@ jobs:
           - 'README.md'
   Sync-Database:
     runs-on: ubuntu-latest
-    needs: [Paths-filter]
+    needs: [paths-filter]
     if: needs.Paths-filter.outputs.prisma == 'true'
     steps:
       - uses: actions/checkout@v3
@@ -40,11 +40,11 @@ jobs:
         run: pnpm exec prisma migrate deploy
   Deploy-App:
     runs-on: ubuntu-latest
-    needs: [Sync-Database, Paths-filter]
+    needs: [Sync-Database, paths-filter]
     if: |
       always() &&
       (needs.Sync-database.result == 'success' || needs.Sync-database.result == 'skipped') &&
-      needs.Paths-filter.outputs.readme == 'true'
+      needs.paths-filter.outputs.readme == 'false'
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
