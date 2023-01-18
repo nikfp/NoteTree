@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Breadcrumb } from "sveltestrap"
   import type { BreadCrumb as Crumb } from "../../routes/api/breadcrumbs/+server"
 
   export let id: string
@@ -19,7 +18,7 @@
   })(id)
 </script>
 
-<Breadcrumb>
+<ol class="breadcrumbs">
   <a href="/">Home</a>
   {#await crumbs}
     .... loading ....
@@ -34,4 +33,16 @@
       {/each}
     {/if}
   {/await}
-</Breadcrumb>
+</ol>
+
+<style>
+  .breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+  }
+</style>
