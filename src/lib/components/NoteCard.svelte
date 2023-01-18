@@ -25,7 +25,7 @@
   }
 
   .cardlink:hover {
-    box-shadow: 0 0.375rem 0.25rem 0.125rem var(--fbc-secondary-text);
+    box-shadow: 0 0.375rem 0.25rem 0.125rem var(--fbc-secondary-text, var(--secondary));
     transform: translateY(-0.375rem);
   }
 
