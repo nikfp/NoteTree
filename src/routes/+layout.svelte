@@ -49,18 +49,45 @@
       "Noto Color Emoji";
     padding: 0 1rem 1rem 1rem;
     max-width: 680px;
-    background: #fff;
+    background: var(--clr-background);
     color: #333;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
   }
   :global(li),
   :global(p) {
     line-height: 1.5rem;
+    margin-bottom: 1rem;
   }
   :global(a) {
     font-weight: 500;
+    text-decoration: none;
+  }
+  :global(a:visited) {
+    color: inherit;
+  }
+  :global(a:hover) {
+    text-decoration: none;
+  }
+  :global(h1,h2,h3,h4,h5,h6){
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  :global(h1) {
+    font-size: 2.5rem;
   }
   :global(hr) {
     border: 1px solid #ddd;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
   }
   :global(iframe) {
     background: #ccc;
@@ -70,7 +97,53 @@
     border-radius: 0.5rem;
     filter: invert(1);
   }
+  :global(.btnn) {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    /* border: 1px solid transparent; */
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: var(--brd-radius);
+    border-style: solid;
+    border-width: 1px;
+  }
 
+  :global(.btnn-outline-secondary) {
+    color: var(--clr-secondary);
+    border-color: var(--clr-secondary);
+    background-color: var(--clr-background);
+  }
+
+  :global(.btnn-outline-secondary:hover,.btnn-outline-secondary:active){
+    color: var(--clr-background);
+    background-color: var(--clr-secondary);
+  }
+  :global(.btnn-outline-danger) {
+    color: var(--clr-danger);
+    border-color: var(--clr-danger);
+    background-color: var(--clr-background);
+  }
+
+  :global(.btnn-outline-danger:hover,.btnn-outline-danger:active){
+    color: var(--clr-background);
+    background-color: var(--clr-danger);
+  }
+
+  :global(.btnn-spaced) {
+    margin: 0.125rem 0;
+  }
+
+  :global(.btnn-sm) {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: calc(var(--brd-radius) * .8);
+  }
   .nojs-show {
     opacity: 1;
     top: 0;

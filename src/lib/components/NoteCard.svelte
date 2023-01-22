@@ -39,5 +39,15 @@
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
   }
 </style>
