@@ -7,7 +7,7 @@
   <Loading />
 {/if}
 
-<div>
+<div class="app">
   <header>
     <div class="signedInStatus">
       <p class="nojs-show loaded">
@@ -50,9 +50,9 @@
     padding: 0 1rem 1rem 1rem;
     max-width: 680px;
     background: var(--clr-background);
-    color: #333;
+    color: var(--clr-foreground);
     box-sizing: border-box;
-    margin: 0;
+    margin: 0 auto;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -132,6 +132,16 @@
   :global(.btnn-outline-danger:hover,.btnn-outline-danger:active){
     color: var(--clr-background);
     background-color: var(--clr-danger);
+  }
+
+  :global(.btnn-danger) {
+    border-color: var(--clr-danger); 
+    color: var(--clr-background);
+    background-color: var(--clr-danger);
+  }
+
+  :global(.btnn-danger:hover,.btnn-danger:active){
+    background-color: var(--clr-alert-hover);
   }
 
   :global(.btnn-success) {

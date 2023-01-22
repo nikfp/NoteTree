@@ -10,11 +10,12 @@ html {
 :root {
   --clr-alert: #721c24;
   --clr-alert-background: #f8d7da;
-  --clr-alert-border: #f5c6cb;
+  --clr-alert-hover: #c82333;
   --clr-background: #fff;
   --clr-black: black;
   --clr-blue: #007bff;
   --clr-danger: #dc3545;
+  --clr-foreground: #333;
   --clr-secondary: #5b5b66;
   --clr-success: #28a745;
   --clr-success-hover: #218838;
