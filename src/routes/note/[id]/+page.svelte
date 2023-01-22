@@ -2,6 +2,9 @@
   import BreadCrumbs from "$lib/components/BreadCrumbs.svelte"
 
   import NoteCard from "$lib/components/NoteCard.svelte"
+  
+  import Markdown from 'svelte-exmarkdown'
+  import { gfmPlugin } from 'svelte-exmarkdown/gfm'
 
   import type { PageData } from "./$types"
   export let data: PageData
@@ -46,9 +49,9 @@
 
 <hr />
 
-<p>
-  {data.note.body}
-</p>
+<div class="markdown">
+  <Markdown md={data.note.body} plugins={[gfmPlugin]} />
+</div>
 <hr />
 {#each data.note.children as child (child.id)}
   <NoteCard
@@ -67,3 +70,5 @@
     margin: 0.125rem 0;
   }
 </style>
+
+
