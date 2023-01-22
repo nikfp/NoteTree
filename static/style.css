@@ -8,6 +8,9 @@ html {
 }
 
 :root {
+  --clr-alert: #721c24;
+  --clr-alert-background: #f8d7da;
+  --clr-alert-border: #f5c6cb;
   --clr-background: #fff;
   --clr-black: black;
   --clr-blue: #007bff;
