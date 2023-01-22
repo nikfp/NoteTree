@@ -14,6 +14,7 @@ html {
   --clr-danger: #dc3545;
   --clr-secondary: #5b5b66;
   --clr-success: #28a745;
+  --clr-success-hover: #218838;
   --clr-white: white;
   --brd-radius: .25rem;
 }

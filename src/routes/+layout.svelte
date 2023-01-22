@@ -134,6 +134,16 @@
     background-color: var(--clr-danger);
   }
 
+  :global(.btnn-success) {
+    color: var(--clr-background);
+    border-color: var(--clr-success);
+    background-color: var(--clr-success);
+  }
+
+  :global(.btnn-success:hover,.btnn-success:active){
+    background-color: var(--clr-success-hover);
+  }
+
   :global(.btnn-spaced) {
     margin: 0.125rem 0;
   }
