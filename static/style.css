@@ -8,15 +8,18 @@ html {
 }
 
 :root {
+  --clr-active: #9cb1c8;
   --clr-alert: #721c24;
   --clr-alert-background: #f8d7da;
   --clr-alert-hover: #c82333;
-  --clr-background: #fff;
+  --clr-background: #16120b;
   --clr-black: black;
   --clr-blue: #007bff;
+  --clr-code-background: #333227;
   --clr-danger: #dc3545;
-  --clr-foreground: #333;
-  --clr-secondary: #5b5b66;
+  --clr-foreground: #9cd1c8;
+  --clr-link: #505546;
+  --clr-secondary: #83a695;
   --clr-success: #28a745;
   --clr-success-hover: #218838;
   --clr-white: white;

@@ -73,8 +73,8 @@
   :global(a:hover) {
     text-decoration: none;
   }
-  :global(h1,h2,h3,h4,h5,h6){
-    margin-bottom: .5rem;
+  :global(h1, h2, h3, h4, h5, h6) {
+    margin-bottom: 0.5rem;
     font-weight: 500;
     line-height: 1.2;
   }
@@ -82,7 +82,7 @@
     font-size: 2.5rem;
   }
   :global(hr) {
-    border: 1px solid #ddd;
+    border: 1px solid var(--clr-foreground);
     margin-top: 1rem;
     margin-bottom: 1rem;
     box-sizing: content-box;
@@ -119,7 +119,7 @@
     background-color: var(--clr-background);
   }
 
-  :global(.btn-outline-secondary:hover,.btn-outline-secondary:active){
+  :global(.btn-outline-secondary:hover, .btn-outline-secondary:active) {
     color: var(--clr-background);
     background-color: var(--clr-secondary);
   }
@@ -129,18 +129,18 @@
     background-color: var(--clr-background);
   }
 
-  :global(.btn-outline-danger:hover,.btn-outline-danger:active){
+  :global(.btn-outline-danger:hover, .btn-outline-danger:active) {
     color: var(--clr-background);
     background-color: var(--clr-danger);
   }
 
   :global(.btn-danger) {
-    border-color: var(--clr-danger); 
+    border-color: var(--clr-danger);
     color: var(--clr-background);
     background-color: var(--clr-danger);
   }
 
-  :global(.btn-danger:hover,.btn-danger:active){
+  :global(.btn-danger:hover, .btn-danger:active) {
     background-color: var(--clr-alert-hover);
   }
 
@@ -150,7 +150,7 @@
     background-color: var(--clr-success);
   }
 
-  :global(.btn-success:hover,.btn-success:active){
+  :global(.btn-success:hover, .btn-success:active) {
     background-color: var(--clr-success-hover);
   }
 
@@ -159,10 +159,21 @@
   }
 
   :global(.btn-sm) {
-    padding: .25rem .5rem;
-    font-size: .875rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
     line-height: 1.5;
-    border-radius: calc(var(--brd-radius) * .8);
+    border-radius: calc(var(--brd-radius) * 0.8);
+  }
+
+  :global(.markdown a) {
+    text-decoration: underline;
+  }
+
+  :global(.markdown pre) {
+    width: fit-content;
+    padding: 0.75rem;
+    background-color: var(--clr-code-background);
+    border-radius: var(--brd-radius);
   }
   .nojs-show {
     opacity: 1;

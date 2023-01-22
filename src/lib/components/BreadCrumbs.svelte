@@ -42,7 +42,19 @@
     padding: 0.75rem 1rem;
     margin-bottom: 1rem;
     list-style: none;
-    background-color: #e9ecef;
-    border-radius: 0.25rem;
+    background-color: var(--clr-secondary);
+    color: var(--clr-link);
+    border-radius: var(--brd-radius);
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  .breadcrumbs a {
+    font-weight: inherit;
+    text-decoration: underline;
+  }
+
+  .breadcrumbs a:active, .breadcrumbs a:hover {
+    color: var(--clr-active);
   }
 </style>
