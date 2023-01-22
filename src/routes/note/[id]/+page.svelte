@@ -27,21 +27,21 @@
 <div class="buttons">
   <a
     href={`/note/${data.note.id}/new`}
-    class="btnn btnn-sm btnn-spaced btnn-outline-secondary">Add a subnote</a
+    class="btn btn-sm btn-spaced btn-outline-secondary">Add a subnote</a
   >
 
   <a
     href={`/note/edit/${data.note.id}`}
-    class="btnn btnn-sm btnn-spaced btnn-outline-secondary">Edit note</a
+    class="btn btn-sm btn-spaced btn-outline-secondary">Edit note</a
   >
 
   {#if data.note.parentId}
     <a
       href={`/note/${data.note.parentId}`}
-      class="btnn btnn-sm btnn-spaced btnn-outline-secondary">Go to parent note</a
+      class="btn btn-sm btn-spaced btn-outline-secondary">Go to parent note</a
     >
   {:else}
-    <a href="/" class="btnn btnn-sm btnn-spaced btnn-outline-secondary"
+    <a href="/" class="btn btn-sm btn-spaced btn-outline-secondary"
       >Go to top level</a
     >
   {/if}
@@ -61,7 +61,7 @@
   />
 {/each}
 
-<a href={`/note/delete/${data.note.id}`} class="btnn btnn-outline-danger btnn-sm"
+<a href={`/note/delete/${data.note.id}`} class="btn btn-outline-danger btn-sm"
   >Delete this note</a
 >
 
@@ -70,7 +70,7 @@
     margin: 0.125rem 0;
   }
 
-  .btnn-outline-danger:visited {
+  .btn-outline-danger:visited {
     color: var(--clr-danger);
   }
 </style>

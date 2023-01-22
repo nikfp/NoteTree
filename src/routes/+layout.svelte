@@ -97,7 +97,7 @@
     border-radius: 0.5rem;
     filter: invert(1);
   }
-  :global(.btnn) {
+  :global(.btn) {
     display: inline-block;
     font-weight: 400;
     text-align: center;
@@ -113,52 +113,52 @@
     border-width: 1px;
   }
 
-  :global(.btnn-outline-secondary) {
+  :global(.btn-outline-secondary) {
     color: var(--clr-secondary);
     border-color: var(--clr-secondary);
     background-color: var(--clr-background);
   }
 
-  :global(.btnn-outline-secondary:hover,.btnn-outline-secondary:active){
+  :global(.btn-outline-secondary:hover,.btn-outline-secondary:active){
     color: var(--clr-background);
     background-color: var(--clr-secondary);
   }
-  :global(.btnn-outline-danger) {
+  :global(.btn-outline-danger) {
     color: var(--clr-danger);
     border-color: var(--clr-danger);
     background-color: var(--clr-background);
   }
 
-  :global(.btnn-outline-danger:hover,.btnn-outline-danger:active){
+  :global(.btn-outline-danger:hover,.btn-outline-danger:active){
     color: var(--clr-background);
     background-color: var(--clr-danger);
   }
 
-  :global(.btnn-danger) {
+  :global(.btn-danger) {
     border-color: var(--clr-danger); 
     color: var(--clr-background);
     background-color: var(--clr-danger);
   }
 
-  :global(.btnn-danger:hover,.btnn-danger:active){
+  :global(.btn-danger:hover,.btn-danger:active){
     background-color: var(--clr-alert-hover);
   }
 
-  :global(.btnn-success) {
+  :global(.btn-success) {
     color: var(--clr-background);
     border-color: var(--clr-success);
     background-color: var(--clr-success);
   }
 
-  :global(.btnn-success:hover,.btnn-success:active){
+  :global(.btn-success:hover,.btn-success:active){
     background-color: var(--clr-success-hover);
   }
 
-  :global(.btnn-spaced) {
+  :global(.btn-spaced) {
     margin: 0.125rem 0;
   }
 
-  :global(.btnn-sm) {
+  :global(.btn-sm) {
     padding: .25rem .5rem;
     font-size: .875rem;
     line-height: 1.5;

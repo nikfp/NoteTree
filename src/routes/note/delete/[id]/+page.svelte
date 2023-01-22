@@ -13,13 +13,13 @@
 {#if childCount > 0}
   <h2>Warning: Note has leaf notes!!</h2>
   <p>You must delete or move the leaf notes before deleting this note!</p>
-  <a href={`/note/${id}`} class="btnn btnn-outline-secondary">Go to Note page</a>
+  <a href={`/note/${id}`} class="btn btn-outline-secondary">Go to Note page</a>
 {:else}
   <div class="alert alert-danger">
     <h2>Delete this note? This cannot be undone!</h2>
     <form method="post">
       <input name="id" id="id" type="text" hidden value={id} />
-      <button type="submit" class="btnn btnn-danger">Delete</button>
+      <button type="submit" class="btn btn-danger">Delete</button>
     </form>
   </div>
 {/if}

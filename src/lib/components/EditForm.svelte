@@ -40,7 +40,7 @@
     <label for="body">Body</label>
     <textarea class="form-control" id="body" name="body" bind:value={body} />
   </div>
-  <button class="btnn btnn-success" {disabled} color="success" type="submit">submit</button>
+  <button class="btn btn-success" {disabled} color="success" type="submit">submit</button>
 </form>
 
 <style>
