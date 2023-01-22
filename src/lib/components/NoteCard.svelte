@@ -25,7 +25,7 @@
   }
 
   .cardlink:hover {
-    box-shadow: 0 0.375rem 0.25rem 0.125rem var(--fbc-secondary-text);
+    box-shadow: 0 0.375rem 0.25rem 0.125rem var(--fbc-secondary-text, var(--secondary));
     transform: translateY(-0.375rem);
   }
 
@@ -35,9 +35,19 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: var(--clr-background);
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 1px solid var(--clr-secondary);
     border-radius: 0.25rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
   }
 </style>

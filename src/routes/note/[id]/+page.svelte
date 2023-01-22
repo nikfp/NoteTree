@@ -69,6 +69,10 @@
   .btn-spaced {
     margin: 0.125rem 0;
   }
+
+  .btn-outline-danger:visited {
+    color: var(--clr-danger);
+  }
 </style>
 
 

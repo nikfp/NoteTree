@@ -7,7 +7,7 @@
   <Loading />
 {/if}
 
-<div>
+<div class="app">
   <header>
     <div class="signedInStatus">
       <p class="nojs-show loaded">
@@ -49,18 +49,45 @@
       "Noto Color Emoji";
     padding: 0 1rem 1rem 1rem;
     max-width: 680px;
-    background: #fff;
-    color: #333;
+    background: var(--clr-background);
+    color: var(--clr-foreground);
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
   }
   :global(li),
   :global(p) {
     line-height: 1.5rem;
+    margin-bottom: 1rem;
   }
   :global(a) {
     font-weight: 500;
+    text-decoration: none;
+  }
+  :global(a:visited) {
+    color: inherit;
+  }
+  :global(a:hover) {
+    text-decoration: none;
+  }
+  :global(h1, h2, h3, h4, h5, h6) {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  :global(h1) {
+    font-size: 2.5rem;
   }
   :global(hr) {
-    border: 1px solid #ddd;
+    border: 1px solid var(--clr-foreground);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
   }
   :global(iframe) {
     background: #ccc;
@@ -70,7 +97,84 @@
     border-radius: 0.5rem;
     filter: invert(1);
   }
+  :global(.btn) {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    /* border: 1px solid transparent; */
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: var(--brd-radius);
+    border-style: solid;
+    border-width: 1px;
+  }
 
+  :global(.btn-outline-secondary) {
+    color: var(--clr-secondary);
+    border-color: var(--clr-secondary);
+    background-color: var(--clr-background);
+  }
+
+  :global(.btn-outline-secondary:hover, .btn-outline-secondary:active) {
+    color: var(--clr-background);
+    background-color: var(--clr-secondary);
+  }
+  :global(.btn-outline-danger) {
+    color: var(--clr-danger);
+    border-color: var(--clr-danger);
+    background-color: var(--clr-background);
+  }
+
+  :global(.btn-outline-danger:hover, .btn-outline-danger:active) {
+    color: var(--clr-background);
+    background-color: var(--clr-danger);
+  }
+
+  :global(.btn-danger) {
+    border-color: var(--clr-danger);
+    color: var(--clr-background);
+    background-color: var(--clr-danger);
+  }
+
+  :global(.btn-danger:hover, .btn-danger:active) {
+    background-color: var(--clr-alert-hover);
+  }
+
+  :global(.btn-success) {
+    color: var(--clr-background);
+    border-color: var(--clr-success);
+    background-color: var(--clr-success);
+  }
+
+  :global(.btn-success:hover, .btn-success:active) {
+    background-color: var(--clr-success-hover);
+  }
+
+  :global(.btn-spaced) {
+    margin: 0.125rem 0;
+  }
+
+  :global(.btn-sm) {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: calc(var(--brd-radius) * 0.8);
+  }
+
+  :global(.markdown a) {
+    text-decoration: underline;
+  }
+
+  :global(.markdown pre) {
+    width: fit-content;
+    padding: 0.75rem;
+    background-color: var(--clr-code-background);
+    border-radius: var(--brd-radius);
+  }
   .nojs-show {
     opacity: 1;
     top: 0;
