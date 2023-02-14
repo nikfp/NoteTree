@@ -38,7 +38,7 @@
   </div>
   <div class="form-group">
     <label for="body">Body</label>
-    <textarea class="form-control" id="body" name="body" bind:value={body} />
+    <textarea class="form-control" id="body" name="body" rows="12" bind:value={body} />
   </div>
   <button class="btn btn-success" {disabled} color="success" type="submit">submit</button>
 </form>
