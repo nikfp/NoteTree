@@ -14,7 +14,7 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-auto": "1.0.3",
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^5.48.0",
     "@typescript-eslint/eslint-plugin-tslint": "^5.48.0",
