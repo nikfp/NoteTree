@@ -8,7 +8,7 @@ export type BreadCrumb = {
   title: string
 }
 
-export const GET = (async (event) => {
+export const GET = (async function (event) {
   const session = await event.locals.getSession()
 
   const user = session?.user
